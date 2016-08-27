@@ -24,8 +24,6 @@ text-align: center;
 input {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-     border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
   font-size: 18px;
   color:#BCD9EA;
   background-color: #026AA7;
@@ -103,4 +101,13 @@ li:hover span {
 
 p {
   display: inline;
+}
+.lastLi {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.last {
+     border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
