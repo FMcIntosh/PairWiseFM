@@ -1,3 +1,12 @@
+$("ul").on("click", "span", function(e){
+  // stop events applied to li occurring
+  e.stopPropagation();
+  $(this).parent().fadeOut(300, function(){
+  $(this).remove();
+  });
+  
+});
+
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
