@@ -11,7 +11,7 @@ body {
 
 h1 {
 /*  background: #2980b9;*/
-  color: white;
+  color: #E4F0F6;
     margin:0;
     padding: 10px 0;
   text-transform: uppercase;
@@ -22,7 +22,8 @@ h1 {
 
 input {
   font-size: 18px;
-  color: #298FCA;
+  color:#BCD9EA;
+
   background-color: #026AA7;
   width: 100%;
   padding: 13px 13px 13px 20px;
@@ -34,4 +35,25 @@ input:hover{
   background: #055A8C;
   border: 3px solid #055A8C;
   outline: none;
+}
+
+input:focus{
+  background: #055A8C;
+  border: 3px solid #055A8C;
+  outline: none;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #8BBDD9;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: #8BBDD9;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: #8BBDD9;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #8BBDD9;
 }
