@@ -3,6 +3,18 @@ body {
 }
 
 #container {
+  background-color: #2980b9;
   width: 360px;
   margin: 100px auto;
+}
+
+h1 {
+  background: #2980b9;
+  color: white;
+    margin:0;
+    padding: 10px 0;
+  text-transform: uppercase;
+    text-align: center;
+  font-size: 24px;
+  font-weight: normal;
 }
