@@ -4,6 +4,7 @@ function getRandomInt(min, max) {
 
 var names = [];
 
+var pading = "      ";
 // Adding a person
 $("form").on("submit", function(e){
   // stop page refresh
@@ -14,7 +15,7 @@ $("form").on("submit", function(e){
    var values = $("input").val();
     names.push(values);
    // create to-do and add to list, then clear input field
-   $("ul").append("<li>" + values + "<span><i class='fa fa-times' aria-hidden='true'></i></spans></li>");
+   $("ul").append("<li>"+ values +  "<span id= 'right'><i class='fa fa-times' aria-hidden='true'></i></span></li>");
    $("input").val("");
     names.forEach(function(s) {
     console.log(s);
