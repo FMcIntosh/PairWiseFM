@@ -14,7 +14,7 @@ $("form").on("submit", function(e){
    var values = $("input").val();
     names.push(values);
    // create to-do and add to list, then clear input field
-   $("ul").append("<li>" + values + "</li>");
+   $("ul").append("<li>" + values + "<span><i class='fa fa-times' aria-hidden='true'></i></spans></li>");
    $("input").val("");
     names.forEach(function(s) {
     console.log(s);
