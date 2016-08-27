@@ -72,12 +72,10 @@ color: #BCD9EA;
 }
 
 span {
-  background: #e74c3c;
   height: 40px;
   margin-right: 20px;
-  text-align: center;
+  text-align: right;
   color: white;
-  width: 0;
   display: inline-block;
   transition: 0.2s linear;
   opacity: 0;
@@ -96,7 +94,6 @@ li:hover {
        color: #E4F0F6
 }
 li:hover span {
-  width: 40px;
   opacity: 1.0;
  
 }
