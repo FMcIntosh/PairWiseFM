@@ -2,10 +2,12 @@ $("ul").on("click", "span", function(e){
 
   //add last class to (what will be) the last li
    var lis = document.querySelectorAll("li");
-    lis[lis.length - 2].classList.add("last");
+    
     if($("ul li").length === 1) {
       //if removing the last element     
         $("input").addClass("last");
+    } else {
+        lis[lis.length - 2].classList.add("last");
     }
       // stop events applied to li occurring
   e.stopPropagation();
@@ -21,7 +23,6 @@ function getRandomInt(min, max) {
 }
 
 var names = [];
-
 function adjustBorderRadius() {
     
     // If we are adding elements
@@ -31,8 +32,8 @@ function adjustBorderRadius() {
         $("li").removeClass("last");
         // add last class to last li
         $("li").last().addClass("last");
-
 }
+
 var borderRadius = "5px" ;
 // Adding a person
 $("form").on("submit", function(e){
@@ -53,6 +54,7 @@ $("form").on("submit", function(e){
      adjustBorderRadius("add");
     names.forEach(function(s) {
     console.log(s);
+    
 });
 });
 
@@ -60,6 +62,9 @@ $("form").on("submit", function(e){
 //    
 //})
 
+function pairsButton() {
+//    $("body").html("");
+    }
 function makePairs(objs) {
     var pairs = [];
     while(objs.size != 0) {
@@ -71,4 +76,5 @@ function makePairs(objs) {
         pairs.push(pair);
     }
 }
+
     

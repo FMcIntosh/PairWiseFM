@@ -74,12 +74,17 @@ span {
   height: 40px;
   margin-right: 20px;
   text-align: right;
-  color: white;
+  color: #094C72;
   display: inline-block;
   transition: 0.2s linear;
   opacity: 0;
     position: absolute;
     right: 5px;
+}
+
+span:hover {
+    color: #8BBDD9;
+    transition: 0.1s linear;
 }
 
 li {
