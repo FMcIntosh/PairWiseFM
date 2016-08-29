@@ -63,18 +63,49 @@ $("form").on("submit", function(e){
 //})
 
 function pairsButton() {
-//    $("body").html("");
+    //pair people up
+  var pairedPeople =  makePairs(names);
+    // get height
+   var height =  jQuery(window).height();
+    // get no pairs
+    var noPairs = pairedPeople.pairs.length;
+    //divide height by number of pairs
+    var divHeight = height / noPairs;
+// clear body
+    var body = $("body");
+   body.html("");
+    for(var i = 0; i < noPairs; i++) {
+        var div = 
     }
+    }
+
+var oddOneOut = -1;
+
 function makePairs(objs) {
-    var pairs = [];
-    while(objs.size != 0) {
-        var pair = [];
-        var rand1 = getRandomInt(0, objs.length);
-        pair.push(objs.pop(rand1));
-        var rand2 = getRandomInt(0, objs.length);
-        pair.push(objs.pop(rand2));
-        pairs.push(pair);
+    var peoplePaired = {
+        pairs: [],
+        oddOneOut: -1
     }
+    var pairs = [];
+    //While still two people
+    while(objs.size / 2 != 0) {
+        var pair = [];
+        // do this twice
+        [1,2].forEach(function(i) {
+            // get random numbers
+            var index = getRandomInt(0, objs.length);
+            // push selected person into pair
+            pair.push(objs[index]);
+            // remove person from objs
+           objs.splice(index, 1)
+          
+        })
+        peoplePaired.pairs.push(pair);
+    }
+    if(objs.size ===1 ) {
+       peoplePaired.oddOneOut = ojs.pop();
+    }
+    returnp peoplePaired;
 }
 
     
