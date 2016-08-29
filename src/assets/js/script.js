@@ -114,7 +114,7 @@ function makePairs(objs) {
     if(objs.size ===1 ) {
        peoplePaired.oddOneOut = ojs.pop();
     }
-    returnp peoplePaired;
+    return peoplePaired;
 }
 
     
