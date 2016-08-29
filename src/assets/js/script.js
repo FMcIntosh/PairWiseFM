@@ -79,7 +79,6 @@ function pairsButton() {
     // loop through all the pairs
     for(var i = 0; i < noPairs; i++) {
         // every odd div is dark
-        z
         var className ="light";
         if (i % 2 ===1)  {
             className ="dark";
@@ -87,8 +86,8 @@ function pairsButton() {
         var div = jQuery('<div/>', {
             class: className + " pairDiv",
             rel: 'external',
-            text: 'pairs[i][0] + " and " + pairs[i][1]'
-        }).appendTo('#mySelector');
+            text: pairs[i][0] + " and " + pairs[i][1]
+        }).appendTo('body');
     }
  }
 
@@ -99,30 +98,39 @@ function makePairs(objs) {
         pairs: [],
         oddOneOut: -1
     }
+      
     var pairs = [];
     //While still two people
-    while(objs.size / 2 != 0) {
+    while(objs.length / 2 !== 0) {
         var pair = [];
         // do this twice
         [1,2].forEach(function(i) {
             // get random numbers
-            var index = getRandomInt(0, objs.length);
+            var index = getRandomInt(0, objs.length - 1);
             // push selected person into pair
             pair.push(objs[index]);
             // remove person from objs
-           objs.splice(index, 1)
+            console.log(objs.length);
+           objs.splice(index, 1);
           
-        })
+        });
+           console.log("made it");
+        
         peoplePaired.pairs.push(pair);
     }
+   
     if(objs.size ===1 ) {
-       peoplePaired.oddOneOut = ojs.pop();
+       peoplePaired.oddOneOut = objs.pop();
     }
+    console.log(peoplePaired);
     return peoplePaired;
 }
 
-$('#pairsButton').on("click", function(e) {
-    console.log("made it");
+$('#pairButton').on("click", function(e) {
+    if(names.length > 0) {
     pairsButton();
+    } else {
+        console.log("no names mate");
+    }
 })
     
