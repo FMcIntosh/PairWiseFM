@@ -90,7 +90,7 @@ function pairsButton() {
             text: pairs[i][0] + " and " + pairs[i][1]
         }).appendTo($("ul"));
     }
-    ($(".pairDiv").height(1 / noPairs * 100 + "%"));
+    ($(".pairDiv").height(divHeight + "px"));
  }
 
 var oddOneOut = -1;
