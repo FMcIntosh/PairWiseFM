@@ -75,13 +75,17 @@ function pairsButton() {
     var divHeight = height / noPairs;
 // clear body
     var body = $("body");
-   body.html("");
+     body.html("");
     // loop through all the pairs
     for(var i = 0; i < noPairs; i++) {
         // every odd div is dark
-        var class  = i % 2 === 0 ? "light" : "dark" ;
+        z
+        var className ="light";
+        if (i % 2 ===1)  {
+            className ="dark";
+        }
         var div = jQuery('<div/>', {
-            class: class + " pairDiv",
+            class: className + " pairDiv",
             rel: 'external',
             text: 'pairs[i][0] + " and " + pairs[i][1]'
         }).appendTo('#mySelector');
@@ -117,4 +121,8 @@ function makePairs(objs) {
     return peoplePaired;
 }
 
+$('#pairsButton').on("click", function(e) {
+    console.log("made it");
+    pairsButton();
+})
     
