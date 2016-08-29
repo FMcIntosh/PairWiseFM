@@ -65,6 +65,8 @@ $("form").on("submit", function(e){
 function pairsButton() {
     //pair people up
   var pairedPeople =  makePairs(names);
+    
+    var pairs = pairedPeople.pairs;
     // get height
    var height =  jQuery(window).height();
     // get no pairs
@@ -74,10 +76,17 @@ function pairsButton() {
 // clear body
     var body = $("body");
    body.html("");
+    // loop through all the pairs
     for(var i = 0; i < noPairs; i++) {
-        var div = 
+        // every odd div is dark
+        var class  = i % 2 === 0 ? "light" : "dark" ;
+        var div = jQuery('<div/>', {
+            class: class + " pairDiv",
+            rel: 'external',
+            text: 'pairs[i][0] + " and " + pairs[i][1]'
+        }).appendTo('#mySelector');
     }
-    }
+ }
 
 var oddOneOut = -1;
 
