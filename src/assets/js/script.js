@@ -71,11 +71,12 @@ function pairsButton() {
    var height =  jQuery(window).height();
     // get no pairs
     var noPairs = pairedPeople.pairs.length;
+    console.log(noPairs);
     //divide height by number of pairs
     var divHeight = height / noPairs;
 // clear body
     var body = $("body");
-     body.html("");
+     body.html("<ul id = 'pairlist'></ul>");
     // loop through all the pairs
     for(var i = 0; i < noPairs; i++) {
         // every odd div is dark
@@ -83,12 +84,13 @@ function pairsButton() {
         if (i % 2 ===1)  {
             className ="dark";
         }
-        var div = jQuery('<div/>', {
+        var div = jQuery('<li/>', {
             class: className + " pairDiv",
             rel: 'external',
             text: pairs[i][0] + " and " + pairs[i][1]
-        }).appendTo('body');
+        }).appendTo($("ul"));
     }
+    ($(".pairDiv").height(1 / noPairs * 100 + "%"));
  }
 
 var oddOneOut = -1;

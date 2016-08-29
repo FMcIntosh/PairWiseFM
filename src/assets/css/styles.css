@@ -123,3 +123,8 @@ p {
     left: 25%;
     bottom: 50%;
 }
+
+.pairDiv {
+    width: 100%;
+    text-align: center
+}
