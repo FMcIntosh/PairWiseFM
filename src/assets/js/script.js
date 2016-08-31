@@ -79,7 +79,7 @@ function pairsButton() {
     
      body.html("<ul id = 'pairlist'></ul>");
     jQuery('<button/>', {
-        class: backPairs,
+        class: 'backPairs',
         text: "BacK"
     }).appendTo($("body"));
     // loop through all the pairs
