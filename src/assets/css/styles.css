@@ -12,6 +12,7 @@ body {
   width: 360px;
   margin: 100px auto;
     position: relative;
+    text-align: center;
 }
 
 h1 {
@@ -119,12 +120,6 @@ p {
     border-bottom-right-radius: 5px;
 }
 
-#pairButton {
-    position: absolute;
-    left: 25%;
-    bottom: 50%;
-   
-}
 
 .pairDiv {
   /* older webkit */
@@ -174,3 +169,10 @@ p {
      background-color: #0079BF;
 }
 
+button {
+    margin: 15px auto;
+    border: 2px solid #4CAF54;
+ background-color:  #4CAF54;
+ color: #1F3F11;
+    border-radius: 2px;
+}

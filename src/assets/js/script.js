@@ -65,14 +65,6 @@ $("form").on("submit", function(e){
 function pairsButton() {
     //pair people up
   var pairedPeople =  makePairs(names);
-    
-     var w = window,
-    d = document,
-    e = d.documentElement,
-    g = d.getElementsByTagName('body')[0],
-    y = w.innerHeight|| e.clientHeight|| g.clientHeight;
-    console.log(y);
-    
 
     var pairs = pairedPeople.pairs;
     // get height
