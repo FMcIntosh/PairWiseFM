@@ -66,9 +66,19 @@ function pairsButton() {
     //pair people up
   var pairedPeople =  makePairs(names);
     
+     var w = window,
+    d = document,
+    e = d.documentElement,
+    g = d.getElementsByTagName('body')[0],
+    y = w.innerHeight|| e.clientHeight|| g.clientHeight;
+    console.log(y);
+    
+
     var pairs = pairedPeople.pairs;
     // get height
    var height =  jQuery(window).height();
+    
+    console.log(height);
     // get no pairs
     var noPairs = pairedPeople.pairs.length;
     console.log(noPairs);
@@ -79,7 +89,7 @@ function pairsButton() {
     
      body.html("<ul id = 'pairlist'></ul>");
     jQuery('<button/>', {
-        class: 'backPairs',
+        id: 'backButton',
         text: "BacK"
     }).appendTo($("body"));
     // loop through all the pairs
@@ -138,5 +148,10 @@ $('#pairButton').on("click", function(e) {
     } else {
         console.log("no names mate");
     }
+})
+
+$(document).on("click",'#backButton', function(e) {
+  window.location.reload(); 
+    console.log("BACK");
 })
     
