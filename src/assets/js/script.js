@@ -79,25 +79,25 @@ function pairsButton() {
 // clear body
     var body = $("body");
     
-     body.html("<ul id = 'pairlist'></ul>");
-    jQuery('<button/>', {
-        id: 'backButton',
-        text: "BacK"
-    }).appendTo($("body"));
+     $('#container').html("<ul id = 'pairlist'></ul> <p><button id = 'backButton'>Back</button></p>");
+    
+//    jQuery('<button/>', {
+//        text: "Back"
+//    }).appendTo($("body"));
     // loop through all the pairs
     for(var i = 0; i < noPairs; i++) {
         // every odd div is dark
         var className ="light";
         if (i % 2 ===1)  {
             className ="dark";
-        }
+        } 
         var div = jQuery('<li/>', {
             class: className + " pairDiv",
             rel: 'external',
             text: pairs[i][0] + " and " + pairs[i][1]
         }).appendTo($("ul"));
     }
-    ($(".pairDiv").height(divHeight + "px"));
+   // ($(".pairDiv").height(divHeight + "px"));
  }
 
 var oddOneOut = -1;
