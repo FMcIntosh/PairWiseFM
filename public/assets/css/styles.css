@@ -178,9 +178,10 @@ button {
 }
 
 button:hover {
-     background-color:  #4FD683;
-    -moz-transition: 0.5s ease;
-			-webkit-transition: 0.5s ease;
-			-ms-transition: 0.5s ease;
-			transition: 0.5s ease;
+     background-color: #4DC26B;
+    -moz-transition: 0.1s linear;
+			-webkit-transition:0.1s linear;
+			-ms-transition: 0.1s linear;
+			transition: 0.1s linear;
+     border-color: #4DC26B;
 }
