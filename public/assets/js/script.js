@@ -102,6 +102,10 @@ function pairsButton() {
 
 var oddOneOut = -1;
 
+
+/*
+* Pairs people up 
+*/
 function makePairs(objs) {
     var peoplePaired = {
         pairs: [],
@@ -134,6 +138,10 @@ function makePairs(objs) {
     return peoplePaired;
 }
 
+/*
+* Button that checks that there are names in the list and then
+* if there are it calls the pairing function
+*/
 $('#pairButton').on("click", function(e) {
     if(names.length > 0) {
     pairsButton();
